@@ -689,21 +689,24 @@ body{
 .clearfix:after{clear:both;display:block}
 a{color:inherit;text-decoration:none}
 
-.login-wrap{
-	width:100%;
-	margin:auto;
-	max-width:525px;
-	min-height:670px;
-	position:relative;left: 500px;
-	
-	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+.login-wrap {
+    width: 100%;
+    max-width: 525px;
+    min-height: 670px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+    background: rgba(40,57,101,.9);
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
 }
-.login-html{
-	width:100%;
-	height:100%;
-	position:absolute;
-	padding:90px 70px 50px 70px;
-	background:rgba(40,57,101,.9);
+.login-html {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 90px 70px 50px 70px;
 }
 .login-html .sign-in-htm,
 .login-html .sign-up-htm{
@@ -756,22 +759,28 @@ a{color:inherit;text-decoration:none}
 	display:block;
 }
 .login-form .group .input,
-.login-form .group .button{
-	border:none;
-	padding:15px 20px;
-	border-radius:25px;
-	background:rgba(255,255,255,.1);
+.login-form .group .button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    display: block;
+    width: 100%;
 }
 .login-form .group input[data-type="password"]{
 	text-security:circle;
 	-webkit-text-security:circle;
 }
-.login-form .group .label{
-	color:#aaa;
-	font-size:12px;
+.login-form .group .label {
+    color: #aaa;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
 }
 .login-form .group .button{
 	background:#1161ee;
+    cursor: pointer;
 }
 .login-form .group label .icon{
 	width:15px;
@@ -827,4 +836,22 @@ a{color:inherit;text-decoration:none}
 }
 .foot-lnk{
 	text-align:right;
+}
+
+.login-wrap {
+    display: none;
+}
+
+.close-btn {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #1161ee;
 }
